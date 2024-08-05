@@ -43,8 +43,8 @@ pipeline {
         // stage('Deploy'){
         //     steps{
         //         sh """
-        //             cd terrform
-        //             terrform apply -var="app_version=${params.appVersion}"
+        //             cd terraform
+        //             terraform apply -var="app_version=${params.appVersion}"
         //         """
         //     }
         // }
