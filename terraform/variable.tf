@@ -28,6 +28,6 @@ variable "zone_name" {
   default = "sdevops.cloud"
 }
 
-variable "aapp_version" {
+variable "app_version" {
   
 }
