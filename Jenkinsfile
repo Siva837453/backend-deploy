@@ -16,7 +16,7 @@ pipeline {
     }
   
     stages {
-        stage('Deploy'){
+        stage('print the version'){
             steps{
                 script{
         
@@ -24,6 +24,31 @@ pipeline {
                 }
             }
         }
+
+        stage('init'){
+            steps{
+                sh """
+                    cd terrform
+                    terrform init
+                """
+            }
+        }
+        stage('init'){
+            steps{
+                sh """
+                    cd terrform
+                    terrform plan -var="app_version=${params.appVersion}"
+                """
+            }
+        }
+        // stage('Deploy'){
+        //     steps{
+        //         sh """
+        //             cd terrform
+        //             terrform apply -var="app_version=${params.appVersion}"
+        //         """
+        //     }
+        // }
         
                
     }
