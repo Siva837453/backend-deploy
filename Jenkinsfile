@@ -19,7 +19,6 @@ pipeline {
         stage('print the version'){
             steps{
                 script{
-        
                     echo "application version: ${params.appVersion}"
                 }
             }
@@ -33,7 +32,7 @@ pipeline {
                 """
             }
         }
-        stage('init'){
+        stage('plan'){
             steps{
                 sh """
                     cd terrform
