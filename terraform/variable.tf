@@ -27,3 +27,7 @@ variable "common_tags" {
 variable "zone_name" {
   default = "sdevops.cloud"
 }
+
+variable "aapp_version" {
+  
+}
